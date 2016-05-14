@@ -1,0 +1,41 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/olhos_terra"
+        android:duration="3000" />
+    <item
+        android:drawable="@drawable/olho_metade_fechado"
+        android:duration="30" />
+    <item
+        android:drawable="@drawable/olho_fechado"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/olho_metade_fechado"
+        android:duration="30" />
+
+    <item
+        android:drawable="@drawable/olhos_terra"
+        android:duration="400" />
+    <item
+        android:drawable="@drawable/olho_metade_fechado"
+        android:duration="25" />
+    <item
+        android:drawable="@drawable/olho_fechado"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/olho_metade_fechado"
+        android:duration="25" />
+
+    <item
+        android:drawable="@drawable/olhos_terra"
+        android:duration="5000" />
+    <item
+        android:drawable="@drawable/olho_metade_fechado"
+        android:duration="25" />
+    <item
+        android:drawable="@drawable/olho_fechado"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/olho_metade_fechado"
+        android:duration="25" />
+</animation-list>

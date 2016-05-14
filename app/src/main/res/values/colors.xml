@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#022730</color>
+    <color name="colorPrimaryDark">#022730</color>
+    <color name="colorAccent">#159468</color>
+    <color name="colorFundoHistorinhas">#e5e5e5</color>
+    <color name="colorFundoJogos">#159468</color>
+    <color name="colorTexto">#333333</color>
+    <color name="colorFundoBackground">#022730</color>
+</resources>

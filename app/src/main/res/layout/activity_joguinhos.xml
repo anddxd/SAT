@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFundoJogos"
+    tools:context=".view.JoguinhosActivity">
+
+    <!--  Botao para sair comentado pq n ficou bom ainda
+
+      <ImageButton
+          android:id="@+id/btnVoltar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginLeft="18dp"
+          android:layout_marginTop="8dp"
+          android:background="#00000000"
+          android:src="@drawable/ic_voltar" /> -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/game1"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:background="#00000000"
+                android:src="@drawable/game" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="Jogo da Memória"
+                android:textAlignment="center"
+                android:textColor="@color/colorTexto" />
+        </LinearLayout>
+<!--
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/game2"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:background="#00000000"
+                android:src="@drawable/game" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="Fazendinha"
+                android:textAlignment="center"
+                android:textColor="@color/colorTexto" />
+        </LinearLayout>
+        -->
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/game3"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:background="#00000000"
+                android:src="@drawable/game" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="Som dos Animais"
+                android:textAlignment="center"
+                android:textColor="@color/colorTexto" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
