@@ -6,50 +6,46 @@
     android:background="@color/colorFundoBackground"
     tools:context=".view.MainActivity">
 
-
-
     <ImageView
         android:id="@+id/fundo_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background"/>
+        android:background="@drawable/background" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background_estrelas"/>
+        android:background="@drawable/background_estrelas" />
 
     <ImageView
         android:id="@+id/animacao_sono"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@+id/principal"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/principal"
-        android:layout_alignEnd="@+id/principal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/animacao_sono"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/imgLua"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:padding="5dp"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
         android:src="@drawable/lua"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/imgSol"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="1dp"
         android:padding="5dp"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
         android:src="@drawable/sol" />
-
-
 
     <LinearLayout
         android:id="@+id/principal"
@@ -64,14 +60,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
             <!-- planeta -->
             <ImageButton
-            android:id="@+id/planeta_claro"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/corpo_planeta"/>
+                android:id="@+id/planeta_claro"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/corpo_planeta" />
 
             <ImageButton
                 android:id="@+id/planeta_escuro"
@@ -79,8 +74,7 @@
                 android:layout_height="300dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/corpo_planeta_escuro"
-                android:visibility="invisible"
-                />
+                android:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/animacao_olho"
@@ -88,33 +82,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal" />
 
-
-
             <ImageView
                 android:id="@+id/olho_fechado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/olho_fechado"
-                android:visibility="invisible"/>
+                android:visibility="invisible" />
 
-            <!-- Setas -->
-            <!--
-            <ImageButton
-                android:id="@+id/ibSetaEsquerda"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|left"
-                android:background="#00000000"
-                android:src="@drawable/seta_esquerda" />
-
-            <ImageButton
-                android:id="@+id/ibSetaDireita"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|right"
-                android:background="#00000000"
-                android:src="@drawable/seta_direita" /> -->
         </FrameLayout>
     </LinearLayout>
 
@@ -122,17 +97,16 @@
         android:id="@+id/ibHistorinhas"
         android:layout_width="100dp"
         android:layout_height="90dp"
-        android:background="@drawable/btn_historias"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_historias" />
 
     <ImageButton
         android:id="@+id/ibJoguinhos"
         android:layout_width="100dp"
         android:layout_height="90dp"
-        android:background="@drawable/btn_jogos"
+        android:layout_alignEnd="@+id/principal"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/principal"
-        android:layout_alignEnd="@+id/principal" />
-
+        android:background="@drawable/btn_jogos" />
 
 </RelativeLayout>
