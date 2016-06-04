@@ -107,6 +107,18 @@ public class JogoDaMemoriaActivity extends AppCompatActivity {
                     img.setImageResource(R.drawable.porco);
                     API.reproduzirSom(JogoDaMemoriaActivity.this, R.raw.som_porco);
                 }
+                if (Integer.parseInt(ordem.get(position).toString()) == 5) {
+                    img.setImageResource(R.drawable.tucano);
+                    // API.reproduzirSom(JogoDaMemoriaActivity.this, R.raw.som_porco);
+                }
+                if (Integer.parseInt(ordem.get(position).toString()) == 6) {
+                    img.setImageResource(R.drawable.pato);
+                    // API.reproduzirSom(JogoDaMemoriaActivity.this, R.raw.som_porco);
+                }
+                if (Integer.parseInt(ordem.get(position).toString()) == 7) {
+                    img.setImageResource(R.drawable.rino);
+                    // API.reproduzirSom(JogoDaMemoriaActivity.this, R.raw.som_porco);
+                }
 
                 if (primeiraPeca != -1) {
                     gridView.setEnabled(false);
@@ -132,6 +144,12 @@ public class JogoDaMemoriaActivity extends AppCompatActivity {
                             img.setImageResource(R.drawable.ovelha);
                         if (Integer.parseInt(ordem.get(position).toString()) == 4)
                             img.setImageResource(R.drawable.porco);
+                        if (Integer.parseInt(ordem.get(position).toString()) == 5)
+                            img.setImageResource(R.drawable.tucano);
+                        if (Integer.parseInt(ordem.get(position).toString()) == 6)
+                            img.setImageResource(R.drawable.pato);
+                        if (Integer.parseInt(ordem.get(position).toString()) == 7)
+                            img.setImageResource(R.drawable.rino);
                         handler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -176,7 +194,7 @@ public class JogoDaMemoriaActivity extends AppCompatActivity {
     }
 
     public void gerarJogoDaMemoria(int dificuldade) {
-        if (dificuldade <= 10) {
+        if (dificuldade <= 16) {
             cartas.clear();
             cartasReveladas.clear();
             quantidadeDePecas = dificuldade;
@@ -195,6 +213,12 @@ public class JogoDaMemoriaActivity extends AppCompatActivity {
                     cartasReveladas.add(R.drawable.ovelha);
                 if (Integer.parseInt(ordem.get(i).toString()) == 4)
                     cartasReveladas.add(R.drawable.porco);
+                if (Integer.parseInt(ordem.get(i).toString()) == 5)
+                    cartasReveladas.add(R.drawable.tucano);
+                if (Integer.parseInt(ordem.get(i).toString()) == 6)
+                    cartasReveladas.add(R.drawable.pato);
+                if (Integer.parseInt(ordem.get(i).toString()) == 7)
+                    cartasReveladas.add(R.drawable.rino);
             }
             adapter = new ImageAdapter(this, cartasReveladas);
             gridView.setAdapter(adapter);
