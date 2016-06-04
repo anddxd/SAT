@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
@@ -24,6 +25,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class JogoDaMemoriaActivity extends AppCompatActivity {
+
+    ImageButton ibVoltar;
 
     GridView gridView;
 
@@ -44,9 +47,24 @@ public class JogoDaMemoriaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        //Fullscreen
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_jogo_da_memoria);
 
-       // gerarAlerta();
+        // Botao para voltar
+        ibVoltar = (ImageButton) findViewById(R.id.btnVoltar);
+        ibVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
+        // gerarAlerta();
 
 
         setVolumeControlStream(AudioManager.STREAM_MUSIC);

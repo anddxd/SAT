@@ -83,7 +83,7 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="-10dp"
-                    android:src="@drawable/pato" />
+                    android:src="@drawable/pato_faz" />
 
             </FrameLayout>
 
