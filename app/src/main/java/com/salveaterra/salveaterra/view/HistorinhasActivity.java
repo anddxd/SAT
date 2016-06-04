@@ -1,14 +1,18 @@
 package com.salveaterra.salveaterra.view;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.salveaterra.salveaterra.R;
 import com.salveaterra.salveaterra.api.API;
 
 public class HistorinhasActivity extends AppCompatActivity {
+
+    TextView txtTitulos;
     ImageButton ibPoluicao, ibAgua, ibDesmatamento, ibUrbanismo, ibCacaIlegal, ibVoltar;
 
     @Override
@@ -55,5 +59,9 @@ public class HistorinhasActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        txtTitulos = (TextView) findViewById(R.id.titulos);
+        Typeface font = Typeface.createFromAsset(getAssets(), "titulo.ttf");
+        txtTitulos.setTypeface(font);
     }
 }

@@ -7,23 +7,23 @@
     tools:context=".view.JoguinhosActivity">
 
     <FrameLayout
+        android:padding="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorTexto">
 
         <ImageButton
             android:id="@+id/btnVoltar"
-            android:layout_width="57dp"
-            android:layout_height="47dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="18dp"
-            android:layout_marginTop="8dp"
             android:background="#00000000"
             android:src="@drawable/ic_voltar"
-            android:tint="@color/colorFundoHistorinhas"/>
+            android:tint="@color/colorFundoHistorinhas" />
 
         <TextView
+            android:id="@+id/titulos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/btnVoltar"
@@ -64,30 +64,30 @@
                 android:textAlignment="center"
                 android:textColor="@color/colorTexto" />
         </LinearLayout>
-<!--
-        <LinearLayout
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
+        <!--
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/game2"
-                android:layout_width="100dp"
-                android:layout_height="fill_parent"
-                android:layout_margin="5dp"
-                android:background="#00000000"
-                android:src="@drawable/game" />
+                    <ImageButton
+                        android:id="@+id/game2"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="5dp"
+                        android:background="#00000000"
+                        android:src="@drawable/game" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:text="Fazendinha"
-                android:textAlignment="center"
-                android:textColor="@color/colorTexto" />
-        </LinearLayout>
-        -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:text="Fazendinha"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTexto" />
+                </LinearLayout>
+                -->
 
         <LinearLayout
             android:layout_width="110dp"

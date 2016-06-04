@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.salveaterra.salveaterra.R;
 import com.salveaterra.salveaterra.adapter.ImageAdapter;
@@ -26,6 +28,7 @@ import java.util.Collections;
 
 public class JogoDaMemoriaActivity extends AppCompatActivity {
 
+    TextView txtTitulos;
     ImageButton ibVoltar;
 
     GridView gridView;
@@ -62,6 +65,10 @@ public class JogoDaMemoriaActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        txtTitulos = (TextView) findViewById(R.id.titulos);
+        Typeface font = Typeface.createFromAsset(getAssets(), "titulo.ttf");
+        txtTitulos.setTypeface(font);
 
 
         // gerarAlerta();

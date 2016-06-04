@@ -1,15 +1,18 @@
 package com.salveaterra.salveaterra.view;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.salveaterra.salveaterra.R;
 import com.salveaterra.salveaterra.api.API;
 
 public class JoguinhosActivity extends AppCompatActivity {
     ImageButton jogoDaMemoria, game2, game3, ibVoltar;
+    TextView txtTitulos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,10 @@ public class JoguinhosActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        txtTitulos = (TextView) findViewById(R.id.titulos);
+        Typeface font = Typeface.createFromAsset(getAssets(), "titulo.ttf");
+        txtTitulos.setTypeface(font);
 
     }
 }
