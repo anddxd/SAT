@@ -6,118 +6,144 @@
     android:background="@color/colorFundoHistorinhas"
     tools:context=".view.HistorinhasActivity">
 
-    <!--  Botao para sair comentado pq n ficou bom ainda
+    <FrameLayout
+        android:id="@+id/barraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorTexto">
 
-      <ImageButton
-          android:id="@+id/btnVoltar"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentLeft="true"
-          android:layout_alignParentTop="true"
-          android:layout_marginLeft="18dp"
-          android:layout_marginTop="8dp"
-          android:background="#00000000"
-          android:src="@drawable/ic_voltar" /> -->
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="57dp"
+            android:layout_height="47dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:background="#00000000"
+            android:src="@drawable/ic_voltar"
+            android:tint="@color/colorFundoHistorinhas" />
 
-    <!-- Verificar a parada de compatibilidade com a api 10 -->
-    <GridLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnVoltar"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal|clip_horizontal"
+            android:text="Historinhas"
+            android:textColor="@color/colorFundoHistorinhas"
+            android:textSize="25dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
         android:layout_centerVertical="true"
-        android:columnCount="2"
-        android:padding="10dp">
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/ibPoluicao"
-                android:layout_width="100dp"
-                android:layout_height="140dp"
-                android:background="#00000000"
-                android:src="@drawable/livro_azul" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:text="Poluição Ambiental"
-                android:textAlignment="center"
-                android:textColor="@color/colorTexto" />
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/ibPoluicao"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:background="#00000000"
+                    android:src="@drawable/livro_azul" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text="Poluição Ambiental"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTexto" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/ibAgua"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:background="#00000000"
+                    android:src="@drawable/livro_azul" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text="Água"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTexto" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/ibAgua"
-                android:layout_width="100dp"
-                android:layout_height="140dp"
-                android:background="#00000000"
-                android:src="@drawable/livro_azul" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:text="Água"
-                android:textAlignment="center"
-                android:textColor="@color/colorTexto" />
-        </LinearLayout>
+                android:layout_margin="5dp"
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/ibDesmatamento"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:background="#00000000"
+                    android:src="@drawable/livro_azul" />
 
-            <ImageButton
-                android:id="@+id/ibDesmatamento"
-                android:layout_width="100dp"
-                android:layout_height="140dp"
-                android:background="#00000000"
-                android:src="@drawable/livro_azul" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text="Desmatamento"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTexto" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:text="Desmatamento"
-                android:textAlignment="center"
-                android:textColor="@color/colorTexto" />
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/ibCacaIlegal"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:background="#00000000"
+                    android:src="@drawable/livro_azul" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text="Caça Ilegal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTexto" />
+            </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/ibCacaIlegal"
-                android:layout_width="100dp"
-                android:layout_height="140dp"
-                android:background="#00000000"
-                android:src="@drawable/livro_azul" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:text="Caça Ilegal"
-                android:textAlignment="center"
-                android:textColor="@color/colorTexto" />
-        </LinearLayout>
-
-
-    </GridLayout>
+    </LinearLayout>
 
 
 </RelativeLayout>

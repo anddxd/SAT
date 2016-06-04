@@ -9,7 +9,7 @@ import com.salveaterra.salveaterra.R;
 import com.salveaterra.salveaterra.api.API;
 
 public class HistorinhasActivity extends AppCompatActivity {
-    ImageButton ibPoluicao, ibAgua, ibDesmatamento, ibUrbanismo, ibCacaIlegal;
+    ImageButton ibPoluicao, ibAgua, ibDesmatamento, ibUrbanismo, ibCacaIlegal, ibVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,14 @@ public class HistorinhasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 API.mudarTela(HistorinhasActivity.this, VideoActivity.class, "CacaIlegal");
+            }
+        });
+
+        ibVoltar = (ImageButton) findViewById(R.id.btnVoltar);
+        ibVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

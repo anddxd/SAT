@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        fundo_background = (ImageView) findViewById(R.id.fundo_background);
+        //fundo_background = (ImageView) findViewById(R.id.fundo_background);
         planeta_claro = (ImageButton) findViewById(R.id.planeta_claro);
         planeta_escuro = (ImageButton) findViewById(R.id.planeta_escuro);
         olho_fechado = (ImageView) findViewById(R.id.olho_fechado);
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                     imgLua.setClickable(true);
                     planeta_escuro.setVisibility(View.VISIBLE);
                     planeta_escuro.startAnimation(fadeIn);
-                    fundo_background.setVisibility(View.INVISIBLE);
+//                    fundo_background.setVisibility(View.INVISIBLE);
                     olho_fechado.setVisibility(View.VISIBLE);
                     animacaoSono.setVisibility(View.VISIBLE);
 
@@ -192,8 +192,8 @@ public class MainActivity extends AppCompatActivity {
                     imgSol.setClickable(true);
                     planeta_claro.setVisibility(View.VISIBLE);
                     planeta_claro.startAnimation(fadeIn);
-                    fundo_background.setVisibility(View.VISIBLE);
-                    fundo_background.startAnimation(fadeIn);
+//                    fundo_background.setVisibility(View.VISIBLE);
+//                    fundo_background.startAnimation(fadeIn);
                     olho_fechado.setVisibility(View.INVISIBLE);
                     animacaoSono.setVisibility(View.INVISIBLE);
 

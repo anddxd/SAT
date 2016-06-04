@@ -9,7 +9,7 @@ import com.salveaterra.salveaterra.R;
 import com.salveaterra.salveaterra.api.API;
 
 public class JoguinhosActivity extends AppCompatActivity {
-    ImageButton jogoDaMemoria, game2, game3;
+    ImageButton jogoDaMemoria, game2, game3, ibVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,5 +39,14 @@ public class JoguinhosActivity extends AppCompatActivity {
                 API.mudarTela(JoguinhosActivity.this, JogoDaMemoriaMusicalActivity.class);
             }
         });
+
+        ibVoltar = (ImageButton) findViewById(R.id.btnVoltar);
+        ibVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 }

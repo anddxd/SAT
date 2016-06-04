@@ -6,18 +6,34 @@
     android:background="@color/colorFundoHistorinhas"
     tools:context=".view.HistorinhasActivity">
 
-    <!--  Botao para sair comentado pq n ficou bom ainda
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTexto">
 
-     <ImageButton
-         android:id="@+id/btnVoltar"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginLeft="18dp"
-         android:layout_marginTop="8dp"
-         android:background="#00000000"
-         android:src="@drawable/ic_voltar" /> -->
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="57dp"
+            android:layout_height="47dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:background="#00000000"
+            android:src="@drawable/ic_voltar"
+            android:tint="@color/colorFundoHistorinhas" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnVoltar"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal|clip_horizontal"
+            android:text="Historinhas"
+            android:textColor="@color/colorFundoHistorinhas"
+            android:textSize="25dp" />
+
+    </FrameLayout>
 
     <!-- Verificar a parada de compatibilidade com a api 10 -->
     <GridLayout
