@@ -1,0 +1,95 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item
+        android:drawable="@drawable/anim_default_00"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_01"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_02"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_03"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_04"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_05"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_06"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_07"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_08"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_09"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_10"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_11"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_12"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_13"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_14"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_15"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_16"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_17"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_18"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_19"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_20"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_21"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_22"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_23"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_24"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_25"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_26"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_27"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_28"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/anim_default_29"
+        android:duration="10" />
+
+</animation-list>
