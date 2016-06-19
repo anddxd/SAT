@@ -109,15 +109,15 @@ public class JogoDaMemoriaActivity extends AppCompatActivity {
                 }
                 if (Integer.parseInt(ordem.get(position).toString()) == 5) {
                     img.setImageResource(R.drawable.tucano);
-                    // API.reproduzirSom(JogoDaMemoriaActivity.this, R.raw.som_porco);
+                    // API.criarListaDeSons(JogoDaMemoriaActivity.this, R.raw.som_porco);
                 }
                 if (Integer.parseInt(ordem.get(position).toString()) == 6) {
                     img.setImageResource(R.drawable.pato);
-                    // API.reproduzirSom(JogoDaMemoriaActivity.this, R.raw.som_porco);
+                    // API.criarListaDeSons(JogoDaMemoriaActivity.this, R.raw.som_porco);
                 }
                 if (Integer.parseInt(ordem.get(position).toString()) == 7) {
                     img.setImageResource(R.drawable.rino);
-                    // API.reproduzirSom(JogoDaMemoriaActivity.this, R.raw.som_porco);
+                    // API.criarListaDeSons(JogoDaMemoriaActivity.this, R.raw.som_porco);
                 }
 
                 if (primeiraPeca != -1) {
