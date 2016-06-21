@@ -101,6 +101,7 @@ public class JogoDaMemoriaMusicalActivity extends AppCompatActivity {
                         ponteiro++;
                         criarListaDeSons();
                         try {
+                            gridView.setEnabled(false);
                             mp.setDataSource(getApplicationContext(), listaDeSons.get(atual));
                             mp.prepare();
                             mp.start();
@@ -117,6 +118,7 @@ public class JogoDaMemoriaMusicalActivity extends AppCompatActivity {
                                         } else {
                                             atual = 0;
                                             mp.reset();
+                                            gridView.setEnabled(true);
                                         }
                                     } catch (IOException e) {
                                         e.printStackTrace();
