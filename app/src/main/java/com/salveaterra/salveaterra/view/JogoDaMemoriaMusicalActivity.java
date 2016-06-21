@@ -34,15 +34,19 @@ public class JogoDaMemoriaMusicalActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        if(mp.isPlaying()){
+            mp.stop();
+        }
         finish();
-        mp.release();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        if(mp.isPlaying()){
+            mp.stop();
+        }
         finish();
-        mp.release();
     }
 
     @Override
