@@ -20,13 +20,14 @@
         <activity android:name=".view.PatoActivity" />
         <activity android:name=".view.OvelhaActivity" />
         <activity android:name=".view.JogoDaMemoriaMusicalActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
-        <activity android:name=".view.SplashScreenActivity"></activity>
+        <activity android:name=".view.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".TesteJogoSons"></activity>
     </application>
 

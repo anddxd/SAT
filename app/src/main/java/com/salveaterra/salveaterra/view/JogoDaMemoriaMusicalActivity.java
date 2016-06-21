@@ -22,7 +22,6 @@ public class JogoDaMemoriaMusicalActivity extends AppCompatActivity {
     ImageAdapter adapter;
     ArrayList<Integer> sapos = new ArrayList<Integer>();
     ArrayList<Integer> sequenciaGerada = new ArrayList<Integer>();
-    //ArrayList<View> sequenciaExecutada = new ArrayList<View>();
     MediaPlayer mp;
     ArrayList<Uri> listaDeSons = new ArrayList<>();
     Uri som;
@@ -30,11 +29,25 @@ public class JogoDaMemoriaMusicalActivity extends AppCompatActivity {
     int atual = 0;
     int rodada = 1;
     int quantidadeApertada = 0;
+    int ponteiro = 0;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+        mp.release();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
+        mp.release();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         mp = new MediaPlayer();
         setContentView(R.layout.activity_jogo_da_memoria_musical);
         gridView = (GridView) findViewById(R.id.gvMemoriaMusical);
@@ -45,7 +58,6 @@ public class JogoDaMemoriaMusicalActivity extends AppCompatActivity {
         gridView.setNumColumns(2);
         gerarSequencia();
 
-        API.mostrarToast(JogoDaMemoriaMusicalActivity.this, sequenciaGerada.get(0).toString(), 0);
         // tocar som animal
         if (sequenciaGerada.get(0) == 0) {
             API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "ovelha", 0);
@@ -53,40 +65,37 @@ public class JogoDaMemoriaMusicalActivity extends AppCompatActivity {
             path = "android.resource://" + getPackageName() + "/raw/som_ovelha";
             som = Uri.parse(path);
             listaDeSons.add(som);
-        } else if(sequenciaGerada.get(0) == 1){
+        } else if (sequenciaGerada.get(0) == 1) {
             API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "cachorro", 0);
             API.reproduzirSom(JogoDaMemoriaMusicalActivity.this, R.raw.som_cachorro);
             path = "android.resource://" + getPackageName() + "/raw/som_cachorro";
             som = Uri.parse(path);
             listaDeSons.add(som);
-        } else if(sequenciaGerada.get(0) == 2){
+        } else if (sequenciaGerada.get(0) == 2) {
             API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "porco", 0);
             API.reproduzirSom(JogoDaMemoriaMusicalActivity.this, R.raw.som_porco);
             path = "android.resource://" + getPackageName() + "/raw/som_porco";
             som = Uri.parse(path);
             listaDeSons.add(som);
-        } else if(sequenciaGerada.get(0) == 3){
+        } else if (sequenciaGerada.get(0) == 3) {
             API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "macaco", 0);
             API.reproduzirSom(JogoDaMemoriaMusicalActivity.this, R.raw.som_macaco);
             path = "android.resource://" + getPackageName() + "/raw/som_macaco";
             som = Uri.parse(path);
             listaDeSons.add(som);
         }
-        //criarListaDeSons(0);
         // esperar click
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (sequenciaGerada.get(quantidadeApertada) == position) {
-                    tocarSons(position);
-                    API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "Acertou", 0);
+                    //tocarSons(position);
                     quantidadeApertada++;
                     if (quantidadeApertada == rodada) {
                         rodada++;
                         quantidadeApertada = 0;
-                        //for (int i = 0; i < rodada; i++) {
-                            criarListaDeSons(position);
-                        //}
+                        ponteiro++;
+                        criarListaDeSons();
                         try {
                             mp.setDataSource(getApplicationContext(), listaDeSons.get(atual));
                             mp.prepare();
@@ -135,7 +144,7 @@ public class JogoDaMemoriaMusicalActivity extends AppCompatActivity {
     public void gerarSequencia() {
         ArrayList<Integer> arrayList = new ArrayList();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 5; i++) {
             arrayList.add(0);
             arrayList.add(1);
             arrayList.add(2);
@@ -149,38 +158,46 @@ public class JogoDaMemoriaMusicalActivity extends AppCompatActivity {
         sequenciaGerada = arrayList;
     }
 
-    public void criarListaDeSons(int position) {
+    public void criarListaDeSons() {
         // ovelha
-        if (sequenciaGerada.get(position) == 0) {
-            API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "ovelha", 0);
-            //API.reproduzirSom(JogoDaMemoriaMusicalActivity.this, R.raw.som_ovelha);
+        if (sequenciaGerada.get(ponteiro) == 0) {
             path = "android.resource://" + getPackageName() + "/raw/som_ovelha";
             som = Uri.parse(path);
             listaDeSons.add(som);
         }
         // cachorro
-        else if (sequenciaGerada.get(position) == 1) {
-            API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "cachorro", 0);
-            //API.reproduzirSom(JogoDaMemoriaMusicalActivity.this, R.raw.som_cachorro);
+        else if (sequenciaGerada.get(ponteiro) == 1) {
             path = "android.resource://" + getPackageName() + "/raw/som_cachorro";
             som = Uri.parse(path);
             listaDeSons.add(som);
         }
         // porco
-        else if (sequenciaGerada.get(position) == 2) {
-            API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "porco", 0);
-            //API.reproduzirSom(JogoDaMemoriaMusicalActivity.this, R.raw.som_porco);
+        else if (sequenciaGerada.get(ponteiro) == 2) {
             path = "android.resource://" + getPackageName() + "/raw/som_porco";
             som = Uri.parse(path);
             listaDeSons.add(som);
         }
         // macaco
-        else if (sequenciaGerada.get(position) == 3) {
-            API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "macaco", 0);
-            //API.reproduzirSom(JogoDaMemoriaMusicalActivity.this, R.raw.som_macaco);
+        else if (sequenciaGerada.get(ponteiro) == 3) {
             path = "android.resource://" + getPackageName() + "/raw/som_macaco";
             som = Uri.parse(path);
             listaDeSons.add(som);
+        }
+        // mostrar proximo
+        if (sequenciaGerada.get(ponteiro) == 0) {
+            API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "ovelha", 0);
+        }
+        // cachorro
+        else if (sequenciaGerada.get(ponteiro) == 1) {
+            API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "cachorro", 0);
+        }
+        // porco
+        else if (sequenciaGerada.get(ponteiro) == 2) {
+            API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "porco", 0);
+        }
+        // macaco
+        else if (sequenciaGerada.get(ponteiro) == 3) {
+            API.mostrarToast(JogoDaMemoriaMusicalActivity.this, "macaco", 0);
         }
     }
 
